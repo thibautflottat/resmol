@@ -1,6 +1,6 @@
-use resmol::{DcdReader, DcdReaderBuilder, Endianness};
 use std::error::Error;
 use std::path::Path;
+use trajin::{DcdReader, DcdReaderBuilder, Endianness};
 
 #[test]
 fn test_builder_pattern() -> Result<(), Box<dyn Error>> {

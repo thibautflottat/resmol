@@ -1,5 +1,5 @@
-use resmol::DcdReader;
 use std::error::Error;
+use trajin::DcdReader;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let path = std::env::args()

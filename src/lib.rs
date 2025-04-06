@@ -1,6 +1,6 @@
-//! # resmol - Rust Molecular Dynamics Library
+//! # trajin - Rust Molecular Dynamics Library
 //!
-//! `resmol` provides efficient readers for common molecular dynamics file formats
+//! `trajin` provides efficient readers for common molecular dynamics file formats
 //! such as DCD trajectories produced by CHARMM, NAMD, and LAMMPS.
 //!
 //! ## Features
@@ -13,7 +13,7 @@
 //! ## Example
 //!
 //! ```no_run
-//! use resmol::DcdReader;
+//! use trajin::DcdReader;
 //!
 //! // Open a DCD trajectory file
 //! let mut reader = DcdReader::open("trajectory.dcd").unwrap();
@@ -34,7 +34,7 @@
 // binary size and compile time for applications that don't need all features
 
 // Re-export the main components for easier access
-// This allows users to write 'use resmol::DcdReader' instead of 'use resmol::dcd::DcdReader'
+// This allows users to write 'use trajin::DcdReader' instead of 'use trajin::dcd::DcdReader'
 #[cfg(feature = "dcd")]
 pub use dcd::{DcdError, DcdReader, DcdReaderBuilder, Endianness, Frame};
 

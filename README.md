@@ -1,4 +1,4 @@
-# resmol
+# trajin
 
 A Rust library for working with molecular dynamics simulation files.
 
@@ -17,7 +17,7 @@ A Rust library for working with molecular dynamics simulation files.
 ## Usage
 
 ```rust
-use resmol::DcdReader;
+use trajin::DcdReader;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Open a DCD file

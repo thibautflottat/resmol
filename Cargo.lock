@@ -62,16 +62,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "resmol"
-version = "0.1.0"
-dependencies = [
- "bytemuck",
- "glam",
- "memmap2",
- "thiserror",
-]
-
-[[package]]
 name = "syn"
 version = "2.0.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -100,6 +90,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "trajin"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "glam",
+ "memmap2",
+ "thiserror",
 ]
 
 [[package]]

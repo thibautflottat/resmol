@@ -16,7 +16,7 @@
 //! ## Example
 //!
 //! ```no_run
-//! use resmol::DcdReader;
+//! use trajin::DcdReader;
 //!
 //! let mut reader = DcdReader::open("trajectory.dcd").unwrap();
 //! for frame_result in reader {

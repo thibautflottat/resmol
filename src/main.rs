@@ -1,18 +1,18 @@
-//! # resmol CLI Tool
+//! # trajin CLI Tool
 //!
-//! This simple command-line tool demonstrates the capabilities of the resmol library.
+//! This simple command-line tool demonstrates the capabilities of the trajin library.
 //! It opens a DCD file, reads its contents, and displays information about the trajectory.
 
 // Import the necessary components from our library
-use resmol::DcdReaderBuilder;
 use std::path::Path;
-use std::time::Instant; // For performance measurement
+use std::time::Instant;
+use trajin::DcdReaderBuilder; // For performance measurement
 
 /// Main entry point for the CLI application
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Get the first command line argument as the input file path
     // If no argument is provided, display a usage message
-    let path = std::env::args().nth(1).expect("Usage: resmol <file.dcd>");
+    let path = std::env::args().nth(1).expect("Usage: trajin <file.dcd>");
 
     // Start a timer to measure performance
     let start_time = Instant::now();

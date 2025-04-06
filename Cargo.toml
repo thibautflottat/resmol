@@ -1,18 +1,18 @@
 [package]
-name = "resmol"
+name = "trajin"
 version = "0.1.0"
 edition = "2024"
-description = "REad Structured MOLecules"
+description = "Pure rust MD trajectory readers."
 authors = ["Thibaut Flottat"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 
 [lib]
-name = "resmol"
+name = "trajin"
 path = "src/lib.rs"
 
 [[bin]]
-name = "resmol"
+name = "trajin"
 path = "src/main.rs"
 
 [dependencies]

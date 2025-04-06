@@ -29,7 +29,7 @@ fn test_iterator_interface() -> Result<(), Box<dyn Error>> {
         return Ok(());
     }
 
-    let mut reader = DcdReader::open(path)?;
+    let reader = DcdReader::open(path)?;
     let expected_frames = reader.num_frames();
 
     let frame_count = reader.count();

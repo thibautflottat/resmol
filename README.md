@@ -8,7 +8,11 @@ A Rust library for working with molecular dynamics simulation files.
 - Memory-mapped file access for efficient frame seeking
 - Support for both little and big endian files
 - Iterator-based API
-- Zero dependencies except for glam Vec3 implementation
+- Minimal dependencies:
+  - `glam` for efficient 3D vector math
+  - `memmap2` for zero-copy memory-mapped file access
+  - `bytemuck` for safe casting between data types
+  - `thiserror` for ergonomic error handling
 
 ## Usage
 

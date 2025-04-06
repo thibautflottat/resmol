@@ -1,0 +1,41 @@
+[package]
+name = "resmol"
+version = "0.1.0"
+edition = "2024"
+description = "REad Structured MOLecules"
+authors = ["Thibaut Flottat"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+
+[lib]
+name = "resmol"
+path = "src/lib.rs"
+
+[[bin]]
+name = "resmol"
+path = "src/main.rs"
+
+[dependencies]
+glam = "0.30.1"
+thiserror = "2.0.12"
+bytemuck = { version = "1.14", features = ["derive"] }
+memmap2 = "0.9.5"
+
+[features]
+default = ["dcd"]
+dcd = []
+
+[[example]]
+name = "basic_usage"
+path = "examples/basic_usage.rs"
+required-features = ["dcd"]
+
+[[example]]
+name = "trajectory_analysis"
+path = "examples/trajectory_analysis.rs"
+required-features = ["dcd"]
+
+[[test]]
+name = "dcd_reader"
+path = "tests/dcd_reader.rs"
+required-features = ["dcd"]

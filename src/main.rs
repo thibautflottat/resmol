@@ -58,32 +58,32 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         frame_count += 1;
 
         // Uncomment to see detailed information about each frame
-        println!(
-            "Frame {} (timestep {}): {} atoms, box dimensions: {:?}",
-            frame_count,
-            frame.timestep,
-            frame.positions.len(),
-            frame.box_dimensions
-        );
+        // println!(
+        //     "Frame {} (timestep {}): {} atoms, box dimensions: {:?}",
+        //     frame_count,
+        //     frame.timestep,
+        //     frame.positions.len(),
+        //     frame.box_dimensions
+        // );
     }
 
     // Demonstrate seeking to a specific frame
-    if reader.num_frames() > 1 {
-        println!("\nSeeking to first frame:");
+    // if reader.num_frames() > 1 {
+    //     println!("\nSeeking to first frame:");
 
-        // The seek_frame method allows random access to frames by index
-        reader.seek_frame(0)?;
+    //     // The seek_frame method allows random access to frames by index
+    //     reader.seek_frame(0)?;
 
-        // Read the frame we sought to
-        if let Some(frame) = reader.read_next()? {
-            println!("  First frame timestep: {}", frame.timestep);
+    //     // Read the frame we sought to
+    //     if let Some(frame) = reader.read_next()? {
+    //         println!("  First frame timestep: {}", frame.timestep);
 
-            // Show the position of the first atom
-            if !frame.positions.is_empty() {
-                println!("  First atom position: {:?}", frame.positions[0]);
-            }
-        }
-    }
+    //         // Show the position of the first atom
+    //         if !frame.positions.is_empty() {
+    //             println!("  First atom position: {:?}", frame.positions[0]);
+    //         }
+    //     }
+    // }
 
     // Calculate and display performance metrics
     let elapsed = start_time.elapsed();
